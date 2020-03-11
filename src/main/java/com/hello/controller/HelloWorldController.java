@@ -1,6 +1,8 @@
 package com.hello.controller;
 
 import com.hello.entity.HelloWorldBean;
+import com.hello.environment.InstanceInformationService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RestController;
@@ -8,9 +10,12 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class HelloWorldController {
 
+    @Autowired
+    private InstanceInformationService instanceInformationService;
+
     @GetMapping("/hello-world")
     public String helloWorld(){
-        return "Hello World V2!!!";
+        return "Hello World V3!!! " + instanceInformationService.retrieveInstanceInfo();
     }
 
     @GetMapping("/hello-world-bean")

@@ -10,7 +10,7 @@
 	</parent>
 	<groupId>com.hello</groupId>
 	<artifactId>hello-world-rest-api</artifactId>
-	<version>0.0.2.ver</version>
+	<version>0.0.3.ver</version>
 	<name>hello-world-rest-api</name>
 	<description>First Rest Service</description>
 
