@@ -18,8 +18,6 @@ public class HelloWorldController {
     @Autowired
     private ScheduledAnnotationBeanPostProcessor postProcessor;
 
-    @Autowired
-    private ScheduledTask scheduledTask;
 
     @GetMapping("/hello-world")
     public String helloWorld(){
