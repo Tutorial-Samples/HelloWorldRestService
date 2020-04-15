@@ -3,6 +3,8 @@ package com.hello.controller;
 import com.hello.entity.HelloWorldBean;
 import com.hello.environment.InstanceInformationService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.scheduling.annotation.ScheduledAnnotationBeanPostProcessor;
+import org.springframework.scheduling.config.ScheduledTask;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RestController;
@@ -13,9 +15,15 @@ public class HelloWorldController {
     @Autowired
     private InstanceInformationService instanceInformationService;
 
+    @Autowired
+    private ScheduledAnnotationBeanPostProcessor postProcessor;
+
+    @Autowired
+    private ScheduledTask scheduledTask;
+
     @GetMapping("/hello-world")
     public String helloWorld(){
-        return "Hello World V4!!! " + instanceInformationService.retrieveInstanceInfo();
+        return "Hello World V5!!! " + instanceInformationService.retrieveInstanceInfo();
     }
 
     @GetMapping("/hello-world-bean")
