@@ -21,7 +21,7 @@ public class HelloWorldController {
 
     @GetMapping("/hello-world")
     public String helloWorld(){
-        return "Hello World V13!!! " + instanceInformationService.retrieveInstanceInfo();
+        return "Hello World V15!!! " + instanceInformationService.retrieveInstanceInfo();
     }
 
     @GetMapping("/hello-world-bean")
