@@ -109,12 +109,14 @@
 						<id>default</id>
 						<goals>
 							<goal>build</goal>
+							<goal>push</goal>
 						</goals>
 					</execution>
 				</executions>
 				<configuration>
 					<repository>vbalaji215/${project.name}</repository>
 					<tag>${project.version}</tag>
+					<tag>latest</tag>
 					<buildArgs>
 						<JAR_FILE>${project.build.finalName}.jar</JAR_FILE>
 					</buildArgs>
